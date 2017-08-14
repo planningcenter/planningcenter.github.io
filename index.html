@@ -13,50 +13,94 @@
     <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Planning Center Developers</h1>
-        <p></p>
-
-
-        <p class="view"><a href="https://github.com/planningcenter">View Our GitHub Profile</a></p>
-
-      </header>
-      <section>
-        <h3>
-<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h3>
-
-<p>
-  Planning Center offers a single API to give you access to data from Check-Ins, People, and Services, with plans to add APIs for our other apps in the future.
-</p>
-
-<h3>
-<a id="getting-started-with-the-pco-api" class="anchor" href="#getting-started-with-the-pco-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started with the PCO API</h3>
-
-<p>The <a href="http://planningcenter.github.io/api-docs/">PCO API Documentation</a> is the best place to get started with our API. There is also a <a href="https://github.com/planningcenter/pco_api_ruby">Ruby gem wrapper</a> that may help you.</p>
-
-<h3>
-<a id="support" class="anchor" href="#support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Community</h3>
-
-<p>The #api channel in our <a href="http://slack.planning.center">Slack community</a> is dedicated to discussing API usage with other third party developers.</p>
-
-<h3>
-<a id="support" class="anchor" href="#support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support</h3>
-
-<p>If you have any questions or run into any hiccups, please open open an issue on our <a href="https://github.com/planningcenter/developers/issues">developer repo</a>.</p>
-
-<h3>
-<a id="pco-heart-developers" class="anchor" href="#pco-heart-developers" aria-hidden="true"><span class="octicon octicon-link"></span></a>PCO <img class="emoji" title=":heart:" alt=":heart:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2764.png" height="20" width="20" align="absmiddle"> Developers</h3>
-
-<p>Planning Center Online is a development driven company - over half of our staff are either developers or designers (designers who code!), <a href="https://github.com/theberg">our owner</a> spends most of his time developing, and our developers maintain several <a href="https://github.com/reactjs/react-rails">popular</a> <a href="https://github.com/churchio">open</a> <a href="https://github.com/carrierwaveuploader/carrierwave">source</a> <a href="https://github.com/minimagick/minimagick">projects</a> and have contributed to many others including Rails and RSpec.</p>
-
-<p>If you're a like minded developer, take a look at our <a href="http://get.planningcenteronline.com/careers">careers page</a>.</p>
+    <header>
+      <div class="wrapper">
+        <h1><img src="./images/logo-planning-center.svg" alt="Planning Center" /> <span>Developers</span></h1>
+      </div>
+    </header>
+    <section id="content">
+      <section id="we-love-developers">
+        <div class="wrapper">
+          <h2><img src="./images/illustration-love-dev.svg" />We Love Developers</h2>
+          <p>Planning Center is a development driven company. About half of our staff are either developers or designers who code.</p>
+          <p>Even <a href="https://github.com/theberg" target="_blank">our owner</a> spends the bulk of his time developing. Our devs contribute to several open source projects (including Rails and RSpec) and regularly teach at conferences and meetups.</p>
+          <p>We’re deeply committed to open source, not only because our business depends on it, but because at our core, we’re a bunch of web geeks. Let’s build some stuff!</p>
+          <ul class="link-list">
+            <li><a href="http://planning.center/about">More About Us</a></li>
+            <li><a href="http://planning.center/careers">See If We’re Hiring</a></li>
+          </ul>
+        </div>
       </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
+      <section id="about-our-api">
+        <section id="about-our-api__overview">
+          <div class="wrapper">
+            <h2><img src="./images/illustration-pco-api.svg" />About Our API</h2>
+            <p>There’s a single API for all of Planning Center. Our API currently interfaces with <span class="icon icon-people"></span>People, <span class="icon icon-services"></span>Services, <span class="icon icon-check-in"></span>Check-Ins, and <span class="icon icon-giving"></span>Giving, with plans to add additional endpoints in the near future.</p>
+            <p>It might go without saying, but you need to be a programmer to use the API. It conforms to the JSON API 1.0 specification, so you need to know how to interpret, traverse, store, and manage that data type.</p>
+            <ul class="link-list">
+              <li><a href="http://planning.center/services/integrations">See What Others Have Built</a></li>
+              <li><a href="http://planningcenter.github.io/api-docs/">API Documentation</a></li>
+              <li><a href="https://api.planningcenteronline.com/oauth/applications">View Your Applications</a></li>
+            </ul>
+          </div>
+        </section>
+        <section id="about-our-api__audiences">
+          <div class="wrapper">
+            <section id="audiences__churches">
+              <img src="./images/illustration-church.svg" />
+              <div class="details">
+                <h3>For Churches</h3>
+                <p>Your tech team can use our API to explore and manipulate your data for a variety of purposes — like creating a church directory, compiling a song book, running custom reports, or whatever else you dream up.</p>
+                <p><strong>To get started,</strong> you’ll need a login to an active Planning Center organization and a Developer Access Token. Each token has an Application ID and a Secret you can use to connect to your Planning Center account.</p>
+                <p><a href="https://api.planningcenteronline.com/oauth/applications" class="btn">Get Your Developer Access Token</a></p>
+              </div>
+            </section>
+            <section id="audiences__apps">
+              <img src="./images/illustration-devices.svg" />
+              <div class="details">
+                <h3>For App Teams</h3>
+                <p>You can use our API to build an integration between your app and ours — whether you have a texting app that wants to pull lists from People, a donations app that wants to sync payments to Giving, or anything in between.</p>
+                <p><strong>To get started,</strong> you’ll need a login to an active Planning Center organization. If you don’t have one, it’s easy to <a href="https://accounts.planningcenteronline.com/pricing">create a new organization</a> (using all free subscription levels if needed) and fill it with some sample data to work with. Then you can create and register your application.</p>
+                <p><a href="https://api.planningcenteronline.com/oauth/applications" class="btn">Register Your Application</a></p>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section id="about-our-api__account-info">
+          <div class="wrapper">
+            <img src="./images/illustration-permissions.svg" />
+            <p>The Planning Center API always acts under the permission levels of the person who has connected it. For churches, that’s the person who generates the Developer Access Token. For App Teams, it’s the person (your user) who initiates the OAuth connection from your app into Planning Center. This should probably be an <a href="https://pcoaccounts.zendesk.com/hc/en-us/articles/204462420-Organization-Administrators-Billing-Managers">organization administrator</a> (a role that has wide permissions across Planning Center) so that the app you’re building can do what it needs to do. If you plan to use the Giving part of our API, that person will need to be a <a href="https://pcogiving.zendesk.com/hc/en-us/articles/206541708-How-Permissions-Work-in-Planning-Center-Giving">Giving administrator</a> as well.</p>
+          </div>
+        </section>
+      </section>
+    </section>
+    <footer>
+      <section id="updates-support">
+        <section id="updates-support__updates">
+          <h3>Updates</h3>
+          <p>Our API is updated regularly. If we implement a potentially breaking change, we’ll send an email to third-party developers via a mailing list. You’re automatically subscribed to this list when you create an application, but you can also sign up below. For minor updates, you can <a href="https://github.com/planningcenter/api-docs/commits/gh-pages.atom">follow this RSS feed</a>.</p>
+          <form>
+            <p><input placeholder="Email address" /><input type="submit" value="Sign up"/></p>
+          </form>
+        </section>
+        <section id="updates-support__slack">
+          <h3>Slack</h3>
+          <p>Planning Center has a thriving customer community on Slack. The #api channel is where you’ll want to ask questions and get help with the API. Keep in mind this is a customer channel, but Planning Center developers will occasionally chime in with an answer or comment. Updates to the API are also posted here.</p>
+          <p><a href="http://slack.planning.center/" class="btn">Join the Slack Community</a></p>
+        </section>
+        <section id="updates-support__github">
+          <h3>Bugs</h3>
+          <p>If you’re a developer, you probably live on GitHub. We do too. We’ve created a repo called “Developers” which is mainly used for tracking issues with the API. There’s also a readme which explains some technical issues related to the API. This is where to go when you think you’ve run into a real problem.</p>
+          <p><a href="https://github.com/planningcenter/developers/issues" class="btn">Open an issue on GitHub</a></p>
+        </section>
+      </section>
+      <section id="credits">
+        <p>
+          <span>Hosted on GitHub Pages</span> &middot;
+          <span><a href="https://github.com/planningcenter">View our GitHub profile</a></span>
+        </p>
+      </section>
+    </footer>
     <script src="javascripts/scale.fix.js"></script>
-
   </body>
 </html>

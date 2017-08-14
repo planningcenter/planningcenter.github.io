@@ -1,255 +1,1012 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+/*----------------------------------------------------------------------
+    Type
+----------------------------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400italic,700italic,400,700);
+
+
+/*----------------------------------------------------------------------
+    Reset
+----------------------------------------------------------------------*/
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, img,
+a, b, abbr, acronym, big, cite, code, del, em, i, ins, small, strike, strong, sub, sup, u,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	font-size: 100%;
+	vertical-align: baseline;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	margin: 0;
+}
+
+
+/*----------------------------------------------------------------------
+    Base
+----------------------------------------------------------------------*/
 
 body {
-  padding:50px;
-  font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
-  font-weight:300;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color:#222;
-  margin:0 0 20px;
-}
-
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
-}
-
-h1, h2, h3 {
-  line-height:1.1;
-}
-
-h1 {
-  font-size:28px;
-}
-
-h2 {
-  color:#393939;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
+  color: rgb(78, 78, 78);
+  font: 8px/1em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;  /* 1em = 8px */
 }
 
 a {
-  color:#39c;
-  font-weight:400;
-  text-decoration:none;
+	color: #3565cf;
+	text-decoration: none;
+	outline: none;
 }
 
-a small {
-  font-size:11px;
-  color:#777;
-  margin-top:-0.6em;
-  display:block;
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
-.wrapper {
-  width:860px;
-  margin:0 auto;
+.clear {
+	clear: both;
+	display: block;
+	height: 1px;
+	line-height: 1px;
 }
 
-blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
+
+/*----------------------------------------------------------------------
+    Layout
+----------------------------------------------------------------------*/
+
+body {
+  background: #fff url("../images/dev-photo.jpg") fixed no-repeat center -54em;
+  background-size: 100% auto;
 }
 
-code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
-  color:#333;
-  font-size:12px;
+@media screen and (max-width: 1600px) {
+  body { background-position: right -54em; background-size: 1600px auto; }
 }
 
-pre {
-  padding:8px 15px;
-  background: #f8f8f8;
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x: auto;
+@media screen and (max-width: 1280px) {
+  body { background-position: right -36em; background-size: 1280px auto; }
 }
 
-table {
-  width:100%;
-  border-collapse:collapse;
+@media screen and (max-width: 768px) {
+  body { background-position: right -24em; background-size: 768px auto; }
 }
 
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-dt {
-  color:#444;
-  font-weight:700;
-}
-
-th {
-  color:#444;
-}
-
-img {
-  max-width:100%;
+header,
+footer {
+  text-align: center;
 }
 
 header {
-  width:270px;
-  float:left;
-  position:fixed;
+  color: rgba(255, 255, 255, .7);
+  font-size: 2.5em;
 }
 
-header ul {
-  list-style:none;
-  height:40px;
+  header .wrapper {
+    background-color: rgba(53, 101, 207, .8);
+    padding: 10em 0;
+  }
 
-  padding:0;
+  header h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
 
-  background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+    header h1 span {
+      position: relative;
+      left: 36px;
+    }
 
-  border-radius:5px;
-  border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
-}
+  header img {
+    display: block;
+    width: 320px;
+    height: auto;
+    margin: -136px auto
+  }
 
-header li {
-  width:89px;
-  float:left;
-  border-right:1px solid #d2d2d2;
-  height:40px;
-}
+  @media screen and (max-width: 768px) {
+    header .wrapper { padding: 5em 0; }
+  }
 
-header ul a {
-  line-height:1;
-  font-size:11px;
-  color:#999;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:40px;
-}
-
-strong {
-  color:#222;
-  font-weight:700;
-}
-
-header ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-header ul a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
-}
-
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
-}
-
-small {
-  font-size:11px;
-}
-
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
+#content .wrapper,
+footer > section {
+  max-width: 1180px;
+  padding: 0 2em;
+  margin: 0 auto;
 }
 
 footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
+  background-color: #242424;
+  color: #fff;
+  font-size: 1.75em;
+  line-height: 1.75em;
 }
 
-@media print, screen and (max-width: 960px) {
-
-  div.wrapper {
-    width:auto;
-    margin:0;
+  footer > section {
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
 
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
+  footer p {
+    margin-bottom: 1.5em;
   }
 
-  header {
-    padding-right:320px;
+  footer h3 {
+    display: inline-block;
+    background: transparent none no-repeat left center;
+    background-size: 24px auto;
+    padding-left: 32px;
   }
 
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
+    footer #updates-support__updates h3 {
+      background-image: url("../images/icon-updates-120px.png");
+    }
+
+    footer #updates-support__slack h3 {
+      background-image: url("../images/icon-slack-120px.png");
+    }
+
+    footer #updates-support__github h3 {
+      background-image: url("../images/icon-github-120px.png");
+    }
+
+  footer p:last-child {
+    margin-bottom: 0;
   }
 
-  header a small {
-    display:inline;
+  footer input {
+    background-color: #fff;
+    font: inherit;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 1em;
   }
 
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
+  footer input[type="submit"] {
+    background-color: rgb(53, 101, 207);
+    color: #fff;
+    margin-left: 1em;
   }
+
+  #updates-support {
+    display: flex;
+    align-items: flex-start;
+  }
+
+    #updates-support section {
+      flex: 1;
+      padding: 0 2em;
+    }
+
+    #updates-support__updates a {
+      color: #aaa;
+    }
+
+    @media screen and (max-width: 768px) {
+      #updates-support { display: block; }
+      #updates-support section { margin-bottom: 3em; }
+      #updates-support section:last-child { margin-bottom: 0; }
+    }
+
+  #credits {
+    max-width: none;
+    background-color: #141414;
+    color: #555;
+    font-size: .857em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1em;
+  }
+
+    #credits a {
+      color: #555;
+    }
+
+    #credits a:hover {
+      color: #fff;
+    }
+
+/*----------------------------------------------------------------------
+    Content
+----------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
 }
 
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
-
-  header {
-    padding:0;
-  }
-
-  header ul, header p.view {
-    position:static;
-  }
-
-  pre, code {
-    word-wrap:normal;
-  }
+a:hover {
+  text-decoration: underline;
 }
 
-@media print, screen and (max-width: 480px) {
-  body {
-    padding:15px;
-  }
-
-  header ul {
-    display:none;
-  }
+#content {
+  font-size: 2em;
+  line-height: 1.75em;
 }
 
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
+h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+  h2 img {
+    display: block;
+    width: 136px;
+    height: auto;
+    margin-bottom: 1em;
   }
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+p,
+ul {
+  margin-bottom: 1.5em;
+}
+
+ul.link-list {
+  list-style: none;
+}
+
+  ul.link-list li {
+    display: inline;
+    margin-right: 1.5em;
+  }
+
+    ul.link-list li a {
+      transition: 0.25s all;
+      border-bottom: 2px solid #eee;
+    }
+
+    ul.link-list li a:hover {
+      border-bottom-color: #bcd0fa;
+      text-decoration: none;
+    }
+
+  @media screen and (max-width: 600px) {
+    ul.link-list li { display: block; }
+  }
+
+a.btn {
+  transition: 0.25s all;
+  display: inline-block;
+  background-color: rgb(53, 101, 207);
+  color: #fff;
+  padding: .5em 1.5em;
+  border-radius: 1em;
+}
+
+a.btn:hover {
+  background-color: rgba(53, 101, 207, .9);
+  text-decoration: none;
+}
+
+/*----------------------------------------------------------------------
+    Specific styles
+----------------------------------------------------------------------*/
+
+.icon-people {
+  color: rgba(53, 101, 207, .9);
+}
+
+.icon-services {
+  color: #6a9639;
+}
+
+.icon-check-in {
+  color: #8c6999;
+}
+
+.icon-giving {
+  color: #f4c551;
+}
+
+#we-love-developers h2 img,
+#about-our-api h2 img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#we-love-developers {
+  background-color: #fff;
+}
+
+#about-our-api {
+  background-color: rgb(248, 248, 248);
+}
+
+  #we-love-developers .wrapper,
+  #about-our-api__overview .wrapper {
+    max-width: 736px;
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  #about-our-api .icon {
+    margin-right: 4px;
+  }
+
+  #about-our-api__audiences img {
+    width: 144px;
+    height: auto;
+    margin: 0 3em 3em 0;
+  }
+
+  #audiences__churches,
+  #audiences__apps {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3em;
+  }
+
+  #about-our-api__account-info {
+    padding-bottom: 3em;
+  }
+
+    #about-our-api__account-info .wrapper {
+      display: flex;
+      background-color: rgb(240, 240, 240);
+      padding: 3em;
+    }
+
+    #about-our-api__account-info :last-child {
+       margin-bottom: 0;
+    }
+
+    #about-our-api__account-info img {
+      width: auto;
+      height: 112px;
+      margin-right: 3em;
+    }
+
+  @media screen and (max-width: 600px) {
+    #audiences__churches, #audiences__apps, #about-our-api__account-info .wrapper { display: block; }
+    #about-our-api h3 { text-align: center; }
+    #about-our-api a.btn { display: block; text-align: center; margin-right: auto; margin-left: auto; }
+    #about-our-api img { display: block; margin: 0 auto 1.5em auto; }
+    #about-our-api__account-info .wrapper { padding: 2em; }
+  }
+
+
+/*----------------------------------------------------------------------
+    Icons
+----------------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'pco';
+  src: url('../fonts/pco.eot');
+  src: url('../fonts/pco.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/pco.woff2') format('woff2'),
+    url('../fonts/pco.woff') format('woff'),
+    url('../fonts/pco.ttf') format('truetype'),
+    url('../fonts/pco.svg#pco') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'pco';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-groups-ill-messages:before {
+  content: "\e90d"
+}
+
+.icon-groups-ill-reports:before {
+  content: "\e90e"
+}
+
+.icon-groups-ill-signup:before {
+  content: "\e90f"
+}
+
+.icon-pco-logo-stacked:before {
+  content: "\e90c"
+}
+
+.icon-youtube:before {
+  content: "\e90b"
+}
+
+.icon-people-workflows:before {
+  content: "\e90a"
+}
+
+.icon-eg-tree:before {
+  content: "\e909"
+}
+
+.icon-video-play:before {
+  content: "\e908"
+}
+
+.icon-pcu-cap:before {
+  content: "\e907"
+}
+
+.icon-resources-approvals:before {
+  content: "\e904"
+}
+
+.icon-resources-resources:before {
+  content: "\e905"
+}
+
+.icon-resources-rooms:before {
+  content: "\e906"
+}
+
+.icon-services-plan:before {
+  content: "\e901"
+}
+
+.icon-services-rehearse:before {
+  content: "\e902"
+}
+
+.icon-services-schedule:before {
+  content: "\e903"
+}
+
+.icon-music-stand-logo:before {
+  content: "\e900"
+}
+
+.icon-check-ins-logo-no-pc:before {
+  content: "\e800"
+}
+
+.icon-giving-logo-no-pc:before {
+  content: "\e801"
+}
+
+.icon-groups-logo-no-pc:before {
+  content: "\e802"
+}
+
+.icon-people-logo-no-pc:before {
+  content: "\e803"
+}
+
+.icon-registrations-logo-no-pc:before {
+  content: "\e804"
+}
+
+.icon-resources-logo-no-pc:before {
+  content: "\e805"
+}
+
+.icon-services-logo-no-pc:before {
+  content: "\e910"
+}
+
+.icon-groups:before {
+  content: "\e63b"
+}
+
+.icon-groups-logo:before {
+  content: "\e63a"
+}
+
+.icon-browser-dashboard:before {
+  content: "\e636"
+}
+
+.icon-browser-giving:before {
+  content: "\e637"
+}
+
+.icon-calculator-function:before {
+  content: "\e638"
+}
+
+.icon-lock-outline:before {
+  content: "\e639"
+}
+
+.icon-planning-center-logo:before {
+  content: "\e635"
+}
+
+.icon-identity-screenshot:before {
+  content: "\e627"
+}
+
+.icon-about-brand:before {
+  content: "\e632"
+}
+
+.icon-about-color:before {
+  content: "\e633"
+}
+
+.icon-about-typography:before {
+  content: "\e634"
+}
+
+.icon-about-hotel:before {
+  content: "\e629"
+}
+
+.icon-about-school:before {
+  content: "\e62f"
+}
+
+.icon-about-theater:before {
+  content: "\e631"
+}
+
+.icon-about-love:before {
+  content: "\e62a"
+}
+
+.icon-about-people:before {
+  content: "\e62b"
+}
+
+.icon-about-pico-outline:before {
+  content: "\e62c"
+}
+
+.icon-about-play:before {
+  content: "\e62d"
+}
+
+.icon-about-present:before {
+  content: "\e62e"
+}
+
+.icon-about-snob:before {
+  content: "\e630"
+}
+
+.icon-identity-blogging:before {
+  content: "\e624"
+}
+
+.icon-identity-branding-pen:before {
+  content: "\e625"
+}
+
+.icon-identity-logo:before {
+  content: "\e626"
+}
+
+.icon-identity-social-media:before {
+  content: "\e628"
+}
+
+.icon-apple:before {
+  content: "\e623"
+}
+
+.icon-school:before {
+  content: "\e622"
+}
+
+.icon-registrations-payments:before {
+  content: "\e61f"
+}
+
+.icon-registrations-reports:before {
+  content: "\e620"
+}
+
+.icon-registrations-signups:before {
+  content: "\e621"
+}
+
+.icon-books:before {
+  content: "\e61b"
+}
+
+.icon-crayon:before {
+  content: "\e61c"
+}
+
+.icon-line-graph:before {
+  content: "\e61d"
+}
+
+.icon-music-note:before {
+  content: "\e61e"
+}
+
+.icon-instagram:before {
+  content: "\e61a"
+}
+
+.icon-people-communication:before {
+  content: "\e617"
+}
+
+.icon-people-households:before {
+  content: "\e618"
+}
+
+.icon-people-spirit-growth:before {
+  content: "\e619"
+}
+
+.icon-giving-logo:before {
+  content: "\e615"
+}
+
+.icon-people-logo:before {
+  content: "\e616"
+}
+
+.icon-giving:before {
+  content: "\e613"
+}
+
+.icon-people:before {
+  content: "\e614"
+}
+
+.icon-apps:before {
+  content: "\e611"
+}
+
+.icon-pricing:before {
+  content: "\e612"
+}
+
+.icon-admin:before {
+  content: "\e60d"
+}
+
+.icon-children:before {
+  content: "\e60e"
+}
+
+.icon-worship:before {
+  content: "\e60f"
+}
+
+.icon-youth:before {
+  content: "\e610"
+}
+
+.icon-pdf:before {
+  content: "\e60c"
+}
+
+.icon-email-outline:before {
+  content: "\e609"
+}
+
+.icon-no-circle-play:before {
+  content: "\e60a"
+}
+
+.icon-registrations-logo:before {
+  content: "\e60b"
+}
+
+.icon-registrations:before {
+  content: "\e608"
+}
+
+.icon-stations:before {
+  content: "\e604"
+}
+
+.icon-dashboard:before {
+  content: "\e605"
+}
+
+.icon-outline-play:before {
+  content: "\e606"
+}
+
+.icon-print-labels:before {
+  content: "\e607"
+}
+
+.icon-services-live:before {
+  content: "\e603"
+}
+
+.icon-help:before {
+  content: "\e003"
+}
+
+.icon-developer-tools:before {
+  content: "\e004"
+}
+
+.icon-developer:before {
+  content: "\e005"
+}
+
+.icon-android:before {
+  content: "\e011"
+}
+
+.icon-advanced:before {
+  content: "\e012"
+}
+
+.icon-academy-logo:before {
+  content: "\e013"
+}
+
+.icon-401k:before {
+  content: "\e014"
+}
+
+.icon-products:before {
+  content: "\e01e"
+}
+
+.icon-prev:before {
+  content: "\e01f"
+}
+
+.icon-play:before {
+  content: "\e020"
+}
+
+.icon-pico:before {
+  content: "\e022"
+}
+
+.icon-pico-graduate:before {
+  content: "\e023"
+}
+
+.icon-people-disc:before {
+  content: "\e024"
+}
+
+.icon-pco:before {
+  content: "\e025"
+}
+
+.icon-next:before {
+  content: "\e026"
+}
+
+.icon-news:before {
+  content: "\e027"
+}
+
+.icon-music-stand:before {
+  content: "\e029"
+}
+
+.icon-mobile:before {
+  content: "\e02a"
+}
+
+.icon-medical:before {
+  content: "\e02b"
+}
+
+.icon-location:before {
+  content: "\e02c"
+}
+
+.icon-laptop:before {
+  content: "\e02d"
+}
+
+.icon-remove-circle:before {
+  content: "\e600"
+}
+
+.icon-job:before {
+  content: "\e02e"
+}
+
+.icon-giving-perk:before {
+  content: "\e031"
+}
+
+.icon-check-ins-logo:before {
+  content: "\e601"
+}
+
+.icon-food:before {
+  content: "\e032"
+}
+
+.icon-faq:before {
+  content: "\e033"
+}
+
+.icon-projector-logo:before {
+  content: "\e01c"
+}
+
+.icon-resources-logo:before {
+  content: "\e021"
+}
+
+.icon-services-logo:before {
+  content: "\e028"
+}
+
+.icon-tablet:before {
+  content: "\e001"
+}
+
+.icon-support:before {
+  content: "\e002"
+}
+
+.icon-summer:before {
+  content: "\e015"
+}
+
+.icon-status:before {
+  content: "\e016"
+}
+
+.icon-services:before {
+  content: "\e017"
+}
+
+.icon-resources:before {
+  content: "\e019"
+}
+
+.icon-projector:before {
+  content: "\e01b"
+}
+
+.icon-profit-sharing:before {
+  content: "\e01d"
+}
+
+.icon-designer-tools:before {
+  content: "\e006"
+}
+
+.icon-designer:before {
+  content: "\e007"
+}
+
+.icon-coffee:before {
+  content: "\e008"
+}
+
+.icon-church:before {
+  content: "\e009"
+}
+
+.icon-chevron-r:before {
+  content: "\e00a"
+}
+
+.icon-chevron-l:before {
+  content: "\e00b"
+}
+
+.icon-check:before {
+  content: "\e00c"
+}
+
+.icon-calendar:before {
+  content: "\e00e"
+}
+
+.icon-blog:before {
+  content: "\e00f"
+}
+
+.icon-beginner:before {
+  content: "\e010"
+}
+
+.icon-developer-logo:before {
+  content: "\e034"
+}
+
+.icon-design-logo:before {
+  content: "\e035"
+}
+
+.icon-support-logo:before {
+  content: "\e036"
+}
+
+.icon-positions-logo:before {
+  content: "\e037"
+}
+
+.icon-enter:before {
+  content: "\e038"
+}
+
+.icon-media:before {
+  content: "\e039"
+}
+
+.icon-integrations:before {
+  content: "\e03a"
+}
+
+.icon-new-window:before {
+  content: "\e03b"
+}
+
+.icon-download:before {
+  content: "\e03c"
+}
+
+.icon-docs:before {
+  content: "\e030"
+}
+
+.icon-spotlight:before {
+  content: "\e03e"
+}
+
+.icon-twitter:before {
+  content: "\e03d"
+}
+
+.icon-feed:before {
+  content: "\e03f"
+}
+
+.icon-facebook:before {
+  content: "\e040"
+}
+
+.icon-vimeo:before {
+  content: "\e041"
+}
+
+.icon-arrow-up:before {
+  content: "\e042"
+}
+
+.icon-delete:before {
+  content: "\e043"
+}
+
+.icon-cancel-circle:before {
+  content: "\e044"
+}
+
+.icon-phone:before {
+  content: "\e045"
+}
+
+.icon-tablet-2:before {
+  content: "\e046"
+}
+
+.icon-desktop:before {
+  content: "\e047"
+}
+
+.icon-iphone:before {
+  content: "\e02f"
+}
+
+.icon-careers:before {
+  content: "\e00d"
+}
+
+.icon-check-in:before {
+  content: "\e602"
 }
