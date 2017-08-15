@@ -129,8 +129,7 @@ footer {
 }
 
   footer > section {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding: 3em 1em;
   }
 
   footer p {
