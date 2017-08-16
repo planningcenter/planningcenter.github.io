@@ -115,7 +115,8 @@ header {
   }
 
 #content .wrapper,
-footer > section {
+footer > section,
+#about-our-api__account-info {
   max-width: 1180px;
   padding: 0 2em;
   margin: 0 auto;
@@ -362,7 +363,7 @@ a.btn:hover {
 
     #about-our-api__account-info img {
       width: auto;
-      height: 112px;
+      height: 132px;
       margin-right: 3em;
     }
 
