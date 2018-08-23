@@ -27,6 +27,110 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 
 /*----------------------------------------------------------------------
+    github-light.css
+----------------------------------------------------------------------*/
+
+.pl-c /* comment */ {
+  color: #969896;
+}
+
+.pl-c1      /* constant, markup.raw, meta.diff.header, meta.module-reference, meta.property-name, support, support.constant, support.variable, variable.other.constant */,
+.pl-s .pl-v /* string variable */ {
+  color: #0086b3;
+}
+
+.pl-e  /* entity */,
+.pl-en /* entity.name */ {
+  color: #795da3;
+}
+
+.pl-s .pl-s1 /* string source */,
+.pl-smi      /* storage.modifier.import, storage.modifier.package, storage.type.java, variable.other, variable.parameter.function */ {
+  color: #333;
+}
+
+.pl-ent /* entity.name.tag */ {
+  color: #63a35c;
+}
+
+.pl-k /* keyword, storage, storage.type */ {
+  color: #a71d5d;
+}
+
+.pl-pds              /* punctuation.definition.string, string.regexp.character-class */,
+.pl-s                /* string */,
+.pl-s .pl-pse .pl-s1 /* string punctuation.section.embedded source */,
+.pl-sr               /* string.regexp */,
+.pl-sr .pl-cce       /* string.regexp constant.character.escape */,
+.pl-sr .pl-sra       /* string.regexp string.regexp.arbitrary-repitition */,
+.pl-sr .pl-sre       /* string.regexp source.ruby.embedded */ {
+  color: #183691;
+}
+
+.pl-v /* variable */ {
+  color: #ed6a43;
+}
+
+.pl-id /* invalid.deprecated */ {
+  color: #b52a1d;
+}
+
+.pl-ii /* invalid.illegal */ {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.pl-sr .pl-cce /* string.regexp constant.character.escape */ {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.pl-ml /* markup.list */ {
+  color: #693a17;
+}
+
+.pl-mh        /* markup.heading */,
+.pl-mh .pl-en /* markup.heading entity.name */,
+.pl-ms        /* meta.separator */ {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.pl-mq /* markup.quote */ {
+  color: #008080;
+}
+
+.pl-mi /* markup.italic */ {
+  color: #333;
+  font-style: italic;
+}
+
+.pl-mb /* markup.bold */ {
+  color: #333;
+  font-weight: bold;
+}
+
+.pl-md /* markup.deleted, meta.diff.header.from-file */ {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.pl-mi1 /* markup.inserted, meta.diff.header.to-file */ {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.pl-mdr /* meta.diff.range */ {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.pl-mo /* meta.output */ {
+  color: #1d3e81;
+}
+
+
+/*----------------------------------------------------------------------
     Base
 ----------------------------------------------------------------------*/
 
@@ -36,7 +140,7 @@ body {
 }
 
 a {
-	color: #3565cf;
+	color: #2565f4;
 	text-decoration: none;
 	outline: none;
 }
@@ -89,7 +193,7 @@ header {
 }
 
   header .wrapper {
-    background-color: rgba(53, 101, 207, .8);
+		background-color: rgba(13, 84, 243, .75);
     padding: 10em 0;
   }
 
@@ -130,7 +234,7 @@ footer {
 }
 
   footer > section {
-    padding: 3em 1em;
+    padding: 3em 1em 5em 1em;
   }
 
   footer p {
@@ -165,14 +269,18 @@ footer {
     font: inherit;
     padding: .5em 1em;
     border: none;
-    border-radius: 1em;
+    border-radius: 3px;
   }
 
   footer input[type="submit"] {
-    background-color: rgb(53, 101, 207);
+    background-color: #2565f4;
     color: #fff;
-    margin-left: 1em;
+    margin-left: .5em;
   }
+
+		footer input[type="submit"]:hover {
+			background-color: #3873f5;
+		}
 
   #updates-support {
     display: flex;
@@ -266,7 +374,7 @@ ul.link-list {
     }
 
     ul.link-list li a:hover {
-      border-bottom-color: #bcd0fa;
+      border-bottom-color: #b7ccfb;
       text-decoration: none;
     }
 
@@ -277,14 +385,14 @@ ul.link-list {
 a.btn {
   transition: 0.25s all;
   display: inline-block;
-  background-color: rgb(53, 101, 207);
+	background-color: #2565f4;
   color: #fff;
   padding: .5em 1.5em;
-  border-radius: 1em;
+  border-radius: 3px;
 }
 
 a.btn:hover {
-  background-color: rgba(53, 101, 207, .9);
+  background-color: #3873f5;
   text-decoration: none;
 }
 
