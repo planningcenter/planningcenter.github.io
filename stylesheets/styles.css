@@ -416,6 +416,10 @@ a.btn:hover {
   color: #f2b327;
 }
 
+.icon-resources {
+  color: #BD513B;
+}
+
 #we-love-developers h2 img,
 #about-our-api h2 img {
   margin-right: auto;
