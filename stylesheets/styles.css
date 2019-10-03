@@ -354,6 +354,12 @@ h3 {
   margin-bottom: 1em;
 }
 
+h4 {
+  font-weight: bold;
+}
+
+
+
 p,
 ul {
   margin-bottom: 1.5em;
@@ -394,6 +400,16 @@ a.btn {
 a.btn:hover {
   background-color: #3873f5;
   text-decoration: none;
+}
+
+a.btn-outline {
+  border: 1px solid #2565f4;
+  background-color: transparent;
+  color: #2565f4;
+}
+
+a.btn-outline:hover {
+  color: #fff;
 }
 
 /*----------------------------------------------------------------------
