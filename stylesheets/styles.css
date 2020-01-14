@@ -2,29 +2,74 @@
     Type
 ----------------------------------------------------------------------*/
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400italic,700italic,400,700);
-
+@import url(
+  https://fonts.googleapis.com/css?family=Lato:400italic,
+  700italic,
+  400,
+  700
+);
 
 /*----------------------------------------------------------------------
     Reset
 ----------------------------------------------------------------------*/
 
-html, body, div, span,
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, img,
-a, b, abbr, acronym, big, cite, code, del, em, i, ins, small, strike, strong, sub, sup, u,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	background: transparent;
-	font-size: 100%;
-	vertical-align: baseline;
-	padding: 0;
-	outline: 0;
-	border: 0;
-	margin: 0;
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+img,
+a,
+b,
+abbr,
+acronym,
+big,
+cite,
+code,
+del,
+em,
+i,
+ins,
+small,
+strike,
+strong,
+sub,
+sup,
+u,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  background: transparent;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  margin: 0;
 }
-
 
 /*----------------------------------------------------------------------
     github-light.css
@@ -129,20 +174,19 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   color: #1d3e81;
 }
 
-
 /*----------------------------------------------------------------------
     Base
 ----------------------------------------------------------------------*/
 
 body {
   color: rgb(78, 78, 78);
-  font: 8px/1em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;  /* 1em = 8px */
+  font: 8px/1em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; /* 1em = 8px */
 }
 
 a {
-	color: #2565f4;
-	text-decoration: none;
-	outline: none;
+  color: #2565f4;
+  text-decoration: none;
+  outline: none;
 }
 
 .clearfix:after {
@@ -154,12 +198,11 @@ a {
 }
 
 .clear {
-	clear: both;
-	display: block;
-	height: 1px;
-	line-height: 1px;
+  clear: both;
+  display: block;
+  height: 1px;
+  line-height: 1px;
 }
-
 
 /*----------------------------------------------------------------------
     Layout
@@ -171,15 +214,24 @@ body {
 }
 
 @media screen and (max-width: 1600px) {
-  body { background-position: right -54em; background-size: 1600px auto; }
+  body {
+    background-position: right -54em;
+    background-size: 1600px auto;
+  }
 }
 
 @media screen and (max-width: 1280px) {
-  body { background-position: right -36em; background-size: 1280px auto; }
+  body {
+    background-position: right -36em;
+    background-size: 1280px auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  body { background-position: right -24em; background-size: 768px auto; }
+  body {
+    background-position: right -24em;
+    background-size: 768px auto;
+  }
 }
 
 header,
@@ -188,35 +240,37 @@ footer {
 }
 
 header {
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 2.5em;
 }
 
+header .wrapper {
+  background-color: rgba(13, 84, 243, 0.75);
+  padding: 10em 0;
+}
+
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header h1 span {
+  position: relative;
+  left: 36px;
+}
+
+header img {
+  display: block;
+  width: 320px;
+  height: auto;
+  margin: -136px auto;
+}
+
+@media screen and (max-width: 768px) {
   header .wrapper {
-		background-color: rgba(13, 84, 243, .75);
-    padding: 10em 0;
+    padding: 5em 0;
   }
-
-  header h1 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-    header h1 span {
-      position: relative;
-      left: 36px;
-    }
-
-  header img {
-    display: block;
-    width: 320px;
-    height: auto;
-    margin: -136px auto
-  }
-
-  @media screen and (max-width: 768px) {
-    header .wrapper { padding: 5em 0; }
-  }
+}
 
 #content .wrapper,
 footer > section,
@@ -233,98 +287,108 @@ footer {
   line-height: 1.75em;
 }
 
-  footer > section {
-    padding: 3em 1em 5em 1em;
+footer > section {
+  padding: 3em 1em 5em 1em;
+}
+
+footer p {
+  margin-bottom: 1.5em;
+}
+
+footer h3 {
+  display: inline-block;
+  background: transparent none no-repeat left center;
+  background-size: 24px auto;
+  padding-left: 32px;
+}
+
+footer #updates-support__updates h3 {
+  background-image: url("../images/icon-updates-120px.png");
+}
+
+footer #updates-support__slack h3 {
+  background-image: url("../images/icon-slack-120px.png");
+}
+
+footer #updates-support__github h3 {
+  background-image: url("../images/icon-github-120px.png");
+}
+
+footer p:last-child {
+  margin-bottom: 0;
+}
+
+footer input {
+  background-color: #fff;
+  font: inherit;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 3px;
+}
+
+footer input[type="submit"] {
+  background-color: #2565f4;
+  color: #fff;
+  margin-left: 0.5em;
+}
+
+footer input[type="submit"]:hover {
+  background-color: #3873f5;
+}
+
+#updates-support {
+  display: flex;
+  align-items: flex-start;
+}
+
+#updates-support section {
+  flex: 1;
+  padding: 0 2em;
+}
+
+#updates-support__updates a {
+  color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+  #updates-support {
+    display: block;
   }
-
-  footer p {
-    margin-bottom: 1.5em;
+  #updates-support section {
+    margin-bottom: 3em;
   }
-
-  footer h3 {
-    display: inline-block;
-    background: transparent none no-repeat left center;
-    background-size: 24px auto;
-    padding-left: 32px;
-  }
-
-    footer #updates-support__updates h3 {
-      background-image: url("../images/icon-updates-120px.png");
-    }
-
-    footer #updates-support__slack h3 {
-      background-image: url("../images/icon-slack-120px.png");
-    }
-
-    footer #updates-support__github h3 {
-      background-image: url("../images/icon-github-120px.png");
-    }
-
-  footer p:last-child {
+  #updates-support section:last-child {
     margin-bottom: 0;
   }
+}
 
-  footer input {
-    background-color: #fff;
-    font: inherit;
-    padding: .5em 1em;
-    border: none;
-    border-radius: 3px;
-  }
+#credits {
+  max-width: none;
+  background-color: #141414;
+  color: #555;
+  font-size: 0.857em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 1em;
+}
 
-  footer input[type="submit"] {
-    background-color: #2565f4;
-    color: #fff;
-    margin-left: .5em;
-  }
+#credits a {
+  color: #555;
+}
 
-		footer input[type="submit"]:hover {
-			background-color: #3873f5;
-		}
-
-  #updates-support {
-    display: flex;
-    align-items: flex-start;
-  }
-
-    #updates-support section {
-      flex: 1;
-      padding: 0 2em;
-    }
-
-    #updates-support__updates a {
-      color: #aaa;
-    }
-
-    @media screen and (max-width: 768px) {
-      #updates-support { display: block; }
-      #updates-support section { margin-bottom: 3em; }
-      #updates-support section:last-child { margin-bottom: 0; }
-    }
-
-  #credits {
-    max-width: none;
-    background-color: #141414;
-    color: #555;
-    font-size: .857em;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding: 1em;
-  }
-
-    #credits a {
-      color: #555;
-    }
-
-    #credits a:hover {
-      color: #fff;
-    }
+#credits a:hover {
+  color: #fff;
+}
 
 /*----------------------------------------------------------------------
     Content
 ----------------------------------------------------------------------*/
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: normal;
 }
 
@@ -342,12 +406,12 @@ h2 {
   margin-bottom: 1em;
 }
 
-  h2 img {
-    display: block;
-    width: 136px;
-    height: auto;
-    margin-bottom: 1em;
-  }
+h2 img {
+  display: block;
+  width: 136px;
+  height: auto;
+  margin-bottom: 1em;
+}
 
 h3 {
   font-size: 1.5em;
@@ -358,8 +422,6 @@ h4 {
   font-weight: bold;
 }
 
-
-
 p,
 ul {
   margin-bottom: 1.5em;
@@ -369,31 +431,33 @@ ul.link-list {
   list-style: none;
 }
 
+ul.link-list li {
+  display: inline;
+  margin-right: 1.5em;
+}
+
+ul.link-list li a {
+  transition: 0.25s all;
+  border-bottom: 2px solid #eee;
+}
+
+ul.link-list li a:hover {
+  border-bottom-color: #b7ccfb;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
   ul.link-list li {
-    display: inline;
-    margin-right: 1.5em;
+    display: block;
   }
-
-    ul.link-list li a {
-      transition: 0.25s all;
-      border-bottom: 2px solid #eee;
-    }
-
-    ul.link-list li a:hover {
-      border-bottom-color: #b7ccfb;
-      text-decoration: none;
-    }
-
-  @media screen and (max-width: 600px) {
-    ul.link-list li { display: block; }
-  }
+}
 
 a.btn {
   transition: 0.25s all;
   display: inline-block;
-	background-color: #2565f4;
+  background-color: #2565f4;
   color: #fff;
-  padding: .5em 1.5em;
+  padding: 0.5em 1.5em;
   border-radius: 3px;
 }
 
@@ -417,7 +481,7 @@ a.btn-outline:hover {
 ----------------------------------------------------------------------*/
 
 .icon-people {
-  color: rgba(53, 101, 207, .9);
+  color: rgba(53, 101, 207, 0.9);
 }
 
 .icon-services {
@@ -432,8 +496,9 @@ a.btn-outline:hover {
   color: #f2b327;
 }
 
-.icon-resources {
-  color: #BD513B;
+.icon-resources, {
+.icon-calendar-app {
+  color: #bd513b;
 }
 
 #we-love-developers h2 img,
@@ -450,78 +515,94 @@ a.btn-outline:hover {
   background-color: rgb(248, 248, 248);
 }
 
-  #we-love-developers .wrapper,
-  #about-our-api__overview .wrapper {
-    max-width: 780px;
-    text-align: center;
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
+#we-love-developers .wrapper,
+#about-our-api__overview .wrapper {
+  max-width: 780px;
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
 
-  #about-our-api .icon {
-    margin-right: 4px;
-  }
+#about-our-api .icon {
+  margin-right: 4px;
+}
 
-  #about-our-api__audiences img {
-    width: 144px;
-    height: auto;
-    margin: 0 3em 3em 0;
-  }
+#about-our-api__audiences img {
+  width: 144px;
+  height: auto;
+  margin: 0 3em 3em 0;
+}
 
+#audiences__churches,
+#audiences__apps {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3em;
+}
+
+#about-our-api__account-info {
+  padding-bottom: 3em;
+}
+
+#about-our-api__account-info .wrapper {
+  display: flex;
+  background-color: rgb(240, 240, 240);
+  padding: 3em;
+}
+
+#about-our-api__account-info :last-child {
+  margin-bottom: 0;
+}
+
+#about-our-api__account-info img {
+  width: auto;
+  height: 132px;
+  margin-right: 3em;
+}
+
+@media screen and (max-width: 600px) {
   #audiences__churches,
-  #audiences__apps {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 3em;
+  #audiences__apps,
+  #about-our-api__account-info .wrapper {
+    display: block;
   }
-
-  #about-our-api__account-info {
-    padding-bottom: 3em;
+  #about-our-api h3 {
+    text-align: center;
   }
-
-    #about-our-api__account-info .wrapper {
-      display: flex;
-      background-color: rgb(240, 240, 240);
-      padding: 3em;
-    }
-
-    #about-our-api__account-info :last-child {
-       margin-bottom: 0;
-    }
-
-    #about-our-api__account-info img {
-      width: auto;
-      height: 132px;
-      margin-right: 3em;
-    }
-
-  @media screen and (max-width: 600px) {
-    #audiences__churches, #audiences__apps, #about-our-api__account-info .wrapper { display: block; }
-    #about-our-api h3 { text-align: center; }
-    #about-our-api a.btn { display: block; text-align: center; margin-right: auto; margin-left: auto; }
-    #about-our-api img { display: block; margin: 0 auto 1.5em auto; }
-    #about-our-api__account-info .wrapper { padding: 2em; }
+  #about-our-api a.btn {
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
   }
-
+  #about-our-api img {
+    display: block;
+    margin: 0 auto 1.5em auto;
+  }
+  #about-our-api__account-info .wrapper {
+    padding: 2em;
+  }
+}
 
 /*----------------------------------------------------------------------
     Icons
 ----------------------------------------------------------------------*/
 
 @font-face {
-  font-family: 'pco';
-  src: url('../fonts/pco.eot');
-  src: url('../fonts/pco.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/pco.woff2') format('woff2'),
-    url('../fonts/pco.woff') format('woff'),
-    url('../fonts/pco.ttf') format('truetype'),
-    url('../fonts/pco.svg#pco') format('svg');
+  font-family: "pco";
+  src: url("../fonts/pco.eot");
+  src: url("../fonts/pco.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/pco.woff2") format("woff2"),
+    url("../fonts/pco.woff") format("woff"),
+    url("../fonts/pco.ttf") format("truetype"),
+    url("../fonts/pco.svg#pco") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'pco';
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "pco";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -531,6 +612,9 @@ a.btn-outline:hover {
   -webkit-font-smoothing: antialiased;
 }
 
+.icon-calendar-app:before {
+  content: "\e920";
+}
 .icon-check-in:before {
   content: "\e900";
 }
